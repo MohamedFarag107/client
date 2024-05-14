@@ -1,4 +1,5 @@
 import { headers } from "next/headers";
+import { Card } from "./_components/Card";
 
 export default async function Home() {
   const response = await fetch(
@@ -18,6 +19,8 @@ export default async function Home() {
         <pre>{JSON.stringify(await response.json(), null, 2)}</pre>
         <pre>{JSON.stringify({ domain, protocol, pathname }, null, 2)}</pre>
       </h4>
+
+      <Card />
     </>
   );
 }
